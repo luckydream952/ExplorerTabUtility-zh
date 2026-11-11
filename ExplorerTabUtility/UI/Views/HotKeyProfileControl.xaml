@@ -51,7 +51,7 @@
                           ToolTip="生效范围：全局（任意位置）或仅资源管理器获得焦点时" />
 
                 <!-- Action -->
-                <ComboBox x:Name="CbAction" Grid.Column="6" Style="{StaticResource CustomComboBoxStyle}" Width="150"
+                <ComboBox x:Name="CbAction" Grid.Column="6" Style="{StaticResource CustomComboBoxStyle}" Width="210"
                           ToolTip="按下快捷键时执行的动作" />
 
                 <!-- Expander button -->
