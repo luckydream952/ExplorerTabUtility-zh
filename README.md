@@ -3,7 +3,9 @@
 **简体中文 | [English](README.en.md)**
 
 > [!IMPORTANT]
-> 本仓库是社区**非官方中文汉化版**。原项目版权归 [w4po](https://github.com/w4po) 所有，遵循 MIT 许可；本仓库仅将界面文案与文档翻译为简体中文，未改动程序逻辑。遇到功能问题请以原项目为准。
+> 本仓库是社区**非官方中文汉化版**，下载见[本仓库 Releases](https://github.com/luckydream952/ExplorerTabUtility-zh/releases)。原项目版权归 [w4po](https://github.com/w4po) 所有，遵循 MIT 许可；本仓库仅将界面文案与文档翻译为简体中文，未改动程序逻辑。遇到功能问题请以 [原项目](https://github.com/w4po/ExplorerTabUtility) 为准。
+>
+> 文档中的配图仍从原仓库 CDN 加载（本仓库不重复存放大体积 GIF），离线时图片可能不显示。
 
 > [!TIP]
 > 让 Windows 11 中把新打开的资源管理器窗口强制并入标签页，工作流更清爽、更有条理！
@@ -115,7 +117,7 @@
   - 环境变量：`%USERPROFILE%\Downloads`
   - Windows CLSID 路径：`{A8CDFF1C-4878-43be-B5FD-F8091C1C60D0}`（特殊文件夹）
   - 程序与文件：`C:\file.txt`
-  - 网址：`https://github.com/w4po/ExplorerTabUtility`（用默认浏览器打开）
+  - 网址：`https://github.com/luckydream952/ExplorerTabUtility-zh`（用默认浏览器打开）
 - 适合高频目录
 - 用 CLSID 可直达系统文件夹
 
@@ -157,7 +159,9 @@
 
 ## 🚀 开始使用
 
-1. 从 [Releases](https://github.com/w4po/ExplorerTabUtility/releases) 下载最新版，或用 `winget` / `choco` 安装：
+1. 从[本仓库 Releases](https://github.com/luckydream952/ExplorerTabUtility-zh/releases) 下载中文版 `ExplorerTabUtility-zh-net481.zip`，解压到任意目录即用（便携版，无需安装）。
+
+    > 下面的 `winget` / `choco` 命令属于**官方原版**渠道，安装的是英文原版，不是本汉化版：
     ```powershell
     winget install w4po.ExplorerTabUtility --interactive
     ```
@@ -317,23 +321,25 @@
 
 按安装方式选择：
 
-- **用安装包安装的**：走 Windows 标准卸载
+> 本汉化版只提供 zip 便携包，对应下面最后一条；其余渠道针对官方原版。
+
+- **用安装包安装的（官方原版）**：走 Windows 标准卸载
   - “设置 > 应用 > 已安装的应用”
   - 找到 “Explorer Tab Utility”，点“卸载”
   - 或用控制面板 > 程序和功能
   - 也可直接运行安装目录里的卸载程序
 
-- **用 winget 安装的**：
+- **用 winget 安装的（官方原版）**：
   ```powershell
   winget uninstall w4po.ExplorerTabUtility
   ```
 
-- **用 Chocolatey 安装的**：
+- **用 Chocolatey 安装的（官方原版）**：
   ```powershell
   choco uninstall explorertabutility
   ```
 
-- **便携版**：直接删除程序文件夹
+- **便携版（含本汉化版）**：直接删除程序文件夹
   - 若开过“开机自启”，删除前先关掉
 
 ## 杀毒软件误报
@@ -376,7 +382,7 @@ Add-MpPreference -ExclusionPath "PATH_TO_UTILITY_FOLDER"
 
 ## 💝 支持项目
 
-如果这个工具帮到了你，可以支持原作者继续开发：
+如果这个工具帮到了你，可以支持原作者继续开发（本汉化仓库不代收任何赞助，以下均为原作者渠道）：
 
 <p align="center">
   <a href="https://github.com/sponsors/w4po">
@@ -432,6 +438,9 @@ Add-MpPreference -ExclusionPath "PATH_TO_UTILITY_FOLDER"
 特别感谢这些包的维护者。
 
 ## 代码签名
+
+> 下表是**官方原版**的签名信息。本汉化版由 GitHub Actions 从本仓库源码自动编译，未做代码签名，首次运行可能触发 SmartScreen 提示，可选择“仍要运行”。
+
 <table>
  <tbody>
   <tr>
