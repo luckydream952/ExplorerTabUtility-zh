@@ -4,6 +4,8 @@
         xmlns:local="clr-namespace:ExplorerTabUtility.UI.Views"
         xmlns:managers="clr-namespace:ExplorerTabUtility.Managers"
         Title="资源管理器标签助手"
+        Icon="/Icon.ico"
+        ShowInTaskbar="True"
         Width="850" Height="600"
         MinWidth="700" MinHeight="175"
         AllowsTransparency="True"
@@ -106,13 +108,13 @@
                                     </EventTrigger>
                                 </ListBox.Triggers>
                                 <ListBoxItem ToolTip="配置键盘与鼠标快捷键">
-                                    <TextBlock Text="&#x1F5F2;  Shortcuts" VerticalAlignment="Center" />
+                                    <TextBlock Text="&#x1F5F2;  快捷键" VerticalAlignment="Center" />
                                 </ListBoxItem>
                                 <ListBoxItem ToolTip="配置应用行为">
-                                    <TextBlock Text="&#xE713;  Preferences" VerticalAlignment="Center" />
+                                    <TextBlock Text="&#xE713;  偏好设置" VerticalAlignment="Center" />
                                 </ListBoxItem>
                                 <ListBoxItem ToolTip="关于本程序与支持方式">
-                                    <TextBlock Text="&#xE939;  About" VerticalAlignment="Center" />
+                                    <TextBlock Text="&#xE939;  关于" VerticalAlignment="Center" />
                                 </ListBoxItem>
                             </ListBox>
                         </DockPanel>
