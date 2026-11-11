@@ -7,6 +7,7 @@
 
     <tb:TaskbarIcon x:Name="TrayIcon"
                     Visibility="Visible"
+                    ToolTipText="资源管理器标签助手（简体中文版）"
                     DataContext="{Binding ElementName=ThisObject}"
                     TrayMouseDoubleClick="OnNotifyIconDoubleClick">
 

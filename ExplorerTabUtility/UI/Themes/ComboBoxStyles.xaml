@@ -21,7 +21,8 @@
                             BorderThickness="1"
                             CornerRadius="2"
                             Padding="{TemplateBinding Padding}">
-                        <ContentPresenter TextElement.Foreground="{StaticResource TextPrimaryBrush}"
+                        <ContentPresenter Content="{Binding Converter={StaticResource EnumDescriptionConverter}}"
+                                          TextElement.Foreground="{StaticResource TextPrimaryBrush}"
                                           ToolTip="{Binding Converter={StaticResource EnumDescriptionConverter}}" />
                     </Border>
                     <ControlTemplate.Triggers>
@@ -70,7 +71,7 @@
                                        Margin="{TemplateBinding Padding}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
-                                       Text="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}"
+                                       Text="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}, Converter={StaticResource EnumDescriptionConverter}}"
                                        Foreground="{StaticResource TextPrimaryBrush}" />
                             <Path x:Name="Arrow"
                                   Grid.Column="1"
