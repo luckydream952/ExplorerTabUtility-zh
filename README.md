@@ -159,17 +159,15 @@
 
 ## 🚀 开始使用
 
-1. 从[本仓库 Releases](https://github.com/luckydream952/ExplorerTabUtility-zh/releases) 下载中文版 `ExplorerTabUtility-zh-net481.zip`，解压到任意目录即用（便携版，无需安装）。
+本汉化版**只提供 zip 便携包**（.NET Framework 4.8.1 版），没有安装包，也没有上架 winget / Chocolatey。
 
-    > 下面的 `winget` / `choco` 命令属于**官方原版**渠道，安装的是英文原版，不是本汉化版：
-    ```powershell
-    winget install w4po.ExplorerTabUtility --interactive
-    ```
-    ```powershell
-    choco install explorertabutility --version 2.5.0 --params "/interactive"
-    ```
-2. 运行程序
-3. 看到托盘图标即可用了
+1. 从[本仓库 Releases](https://github.com/luckydream952/ExplorerTabUtility-zh/releases) 下载 `ExplorerTabUtility-zh-net481.zip`
+2. 解压到任意目录（例如 `D:\Tools\ExplorerTabUtility`），不要直接在 zip 里运行
+3. 双击目录里的 `ExplorerTabUtility.exe`
+4. 看到通知区域出现托盘图标即可用了
+
+> [!NOTE]
+> 系统要求：Windows 11（22H2 Build 22621 及以上，需已有资源管理器标签页）。Win11 自带 .NET Framework 4.8.1，无需另装运行库；不要运行 net9.0 目标，那个需要额外安装 .NET 9 桌面运行时。
 
     ![Menu](https://cdn.jsdelivr.net/gh/w4po/ExplorerTabUtility@master/Assets/Menu.png)
 
@@ -198,7 +196,7 @@
 <details>
 <summary>⚙️ 偏好设置</summary>
 
-- **自动更新**：启动时检查新版本
+- **自动更新**：启动时检查新版本（**汉化版请关闭**：它检查的是官方原仓库，会把程序更新成英文原版）
 - **我有主题显示问题**：改用另一种隐藏窗口方式，保留你自定义的资源管理器主题；遇到主题相关异常时开启
 - **保存已关闭历史**：记录关闭过的窗口，便于之后重新打开（供“恢复关闭”与“标签搜索”使用）
 - **恢复上次的窗口**：重启或崩溃后恢复之前打开的窗口
@@ -308,7 +306,7 @@
 - “关于”页面含开发者信息与支持方式
 
 ### 关键技术
-- .NET 9 与 .NET Framework 4.8.1
+- .NET 9 与 .NET Framework 4.8.1（本汉化版只发布 net481 构建）
 - Windows COM API
   - Shell32 与 SHDocVw 接口
   - 原生 P/Invoke
@@ -319,28 +317,14 @@
 
 ## 🗑️ 卸载
 
-按安装方式选择：
+本汉化版是便携包，卸载就是删目录，不写注册表、不装服务：
 
-> 本汉化版只提供 zip 便携包，对应下面最后一条；其余渠道针对官方原版。
+1. 先右键托盘图标退出程序（或在任务管理器结束 `ExplorerTabUtility.exe`）
+2. 若开过“开机自启”，先在设置里关掉（否则会留下一条指向已删路径的启动项）
+3. 删除程序目录
+4. 如需一并清掉配置：删除 `%APPDATA%\ExplorerTabUtility\` 整个文件夹
 
-- **用安装包安装的（官方原版）**：走 Windows 标准卸载
-  - “设置 > 应用 > 已安装的应用”
-  - 找到 “Explorer Tab Utility”，点“卸载”
-  - 或用控制面板 > 程序和功能
-  - 也可直接运行安装目录里的卸载程序
-
-- **用 winget 安装的（官方原版）**：
-  ```powershell
-  winget uninstall w4po.ExplorerTabUtility
-  ```
-
-- **用 Chocolatey 安装的（官方原版）**：
-  ```powershell
-  choco uninstall explorertabutility
-  ```
-
-- **便携版（含本汉化版）**：直接删除程序文件夹
-  - 若开过“开机自启”，删除前先关掉
+> 官方原版若是用安装包 / `winget` / `choco` 装的，按对应渠道卸载即可；那些方式不适用于本汉化版。
 
 ## 杀毒软件误报
 
